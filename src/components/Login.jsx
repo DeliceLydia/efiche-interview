@@ -66,11 +66,11 @@ const Login = () => {
           <a href="#" className="text-[#1e2433] hover:underline"> Privacy Policy</a>
         </div>
       </div>
-      <div className="hidden lg:block w-1/2 rounded-l-3xl overflow-hidden">
+      <div className="hidden lg:flex w-1/2 justify-center items-center mt-6 mb-6">
         <img
           src={doc}
           alt="Medical Experience"
-          className="w-full h-screen object-cover"
+          className="w-full h-[calc(100vh-3rem)] max-w-[80%] rounded-3xl -mr-14"
         />
       </div>
     </div>

@@ -1,16 +1,13 @@
 import React from 'react';
-import doc from '../assets/doc.png'
+import Image from './Image';
+import Logo from './Logo';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
   return (
     <div className="min-h-screen flex">
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 bg-white">
-        <div className="flex items-center mb-6">
-          <img src="efiche.png" alt="eFiche" className="w-16 h-20 mr-2" />
-          <h1 className="text-4xl font-bold text-gray-900">eFiche</h1>
-        </div>
-
+       <Logo />
         <div className="w-full max-w-md">
           <h2 className="text-xl font-semibold mb-6 text-center">Log into your account</h2>
           <form className="space-y-6">
@@ -66,13 +63,7 @@ const Login = () => {
           <a href="#" className="text-[#1e2433] hover:underline"> Privacy Policy</a>
         </div>
       </div>
-      <div className="hidden lg:flex w-1/2 justify-center items-center mt-6 mb-6">
-        <img
-          src={doc}
-          alt="Medical Experience"
-          className="w-full h-[calc(100vh-3rem)] max-w-[80%] rounded-3xl -mr-14"
-        />
-      </div>
+      <Image />
     </div>
   );
 };

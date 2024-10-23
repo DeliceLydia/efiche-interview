@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Image from './Image';
 import Logo from './Logo';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
+  const navigate = useNavigate();
+  
+  const handleRoles = () => {
+    navigate('/select-roles');
+  };
+
   return (
     <div className="min-h-screen flex">
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 bg-white">
@@ -52,6 +59,7 @@ const Login = () => {
             <button
               type="submit"
               className="w-full py-3 bg-[#27a376] text-white rounded-md hover:bg-green-600"
+              onClick={handleRoles}
             >
               Login
             </button>

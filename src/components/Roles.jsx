@@ -11,7 +11,7 @@ const Roles = () => {
     setSelectedRole(role);
 
     if (role === 'Nurse') {
-      navigate('/nurse-page'); 3
+      navigate('/app/select-roles');
     }
   };
 

@@ -3,6 +3,8 @@ import { FaBars } from 'react-icons/fa';
 import { AiOutlineCaretUp, AiOutlineCaretDown } from 'react-icons/ai';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { TbMessage } from "react-icons/tb";
+import { FaCheck } from "react-icons/fa6";
+import ai from '../assets/ai2.jpeg';
 
 const Navbar = ({ setSidebarToggle, sidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,17 +38,16 @@ const Navbar = ({ setSidebarToggle, sidebarToggle }) => {
 
         {isOpen && (
           <div className="absolute top-16 mt-2 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-48 p-6">
-            <div className="">
+            <div>
               {roles.map((role, index) => (
                 <button
                   key={index}
-                  className="w-full flex justify-between px-4 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
-                  onClick={() => {
-                    setIsOpen(false);
-                  }}
+                  className={`w-full flex justify-between py-4 text-left text-sm font-medium transition-colors 
+                  ${role.name === 'Nurse' ? 'bg-[#f8f8f8] rounded-lg px-5' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'}`}
+                  onClick={() => setIsOpen(false)}
                 >
                   <span>{role.name}</span>
-                  <AiOutlineCaretDown />
+                  {role.name === 'Nurse' && <FaCheck size={24} className="text-[#27a376] -mt-1" />}
                 </button>
               ))}
             </div>
@@ -56,13 +57,13 @@ const Navbar = ({ setSidebarToggle, sidebarToggle }) => {
       <div className="flex gap-8 items-center -mr-52">
         <div className="relative">
           <span className="relative flex">
-          <TbMessage size={24}/>
+            <TbMessage size={24}/>
             <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span>
           </span>
         </div>
-        <div className="relative  flex items-center">
+        <div className="relative flex items-center">
           <img
-            src="ai2.jpeg"
+            src={ai}
             alt="Profile"
             className="w-12 h-12 rounded-full border border-gray-200"
           />

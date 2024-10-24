@@ -3,6 +3,7 @@ import { RxDashboard } from "react-icons/rx";
 import { FiUserPlus, FiUsers } from "react-icons/fi";
 import { CiCalendarDate, CiViewTimeline } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import efiche from '../assets/efiche.png'
 
 const Sidebar = ({ sidebarToggle }) => {
   const menuItems = [
@@ -16,7 +17,7 @@ const Sidebar = ({ sidebarToggle }) => {
   return (
     <div className={`w-50 px-12 pt-4 shadow bg-[#ffffff] fixed h-full ${sidebarToggle ? 'block' : 'hidden'} md:block`}>
       <div className="flex justify-center items-center mb-4">
-        <img src="efiche.png" alt="eFiche" className="w-8 h-12" />
+        <img src={efiche} alt="eFiche" className="w-8 h-12" />
         <h1 className="text-xl font-bold text-[#2c2c2c]">eFiche</h1>
       </div>
 
